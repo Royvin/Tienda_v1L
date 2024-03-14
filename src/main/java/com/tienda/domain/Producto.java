@@ -10,18 +10,18 @@ import lombok.Data;
 
 public class Producto implements Serializable { //serializacion porque se va almacenar ciertos datos en el disco
 
-    private static final long serialVersionUID = 1L; //para poder hacer el ciclo de la sumatoria de la categoria.
+    private static final long serialVersionUID = 1L; //para poder hacer el ciclo de la sumatoria de la producto.
 
-    @Id //id categoria es la llave de la tabla categoria. 
+    @Id //id producto es la llave de la tabla producto. 
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Los valores generados que estrategia usan, identico a la BD 
     @Column(name = "id_producto") //decir cual es el nombre en la base de datos. Se hace la asociación 
-    private long id_producto;
-    private long id_categoria;
-    private String descripcion;  
+    private long idProducto;
+    private long idCategoria;
+    private String descripcion;
     private String detalle;
     private double precio;
-    private int existencias;  
-    private String ruta_imagen;
+    private int existencias;
+    private String rutaImagen;
     private boolean activo;
 
     public Producto() {

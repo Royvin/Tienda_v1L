@@ -41,12 +41,11 @@ public class ProductoController {
             @RequestParam("imagenFile") MultipartFile imagenFile) {        
         if (!imagenFile.isEmpty()) {
             productoService.save(producto);
-            producto.setRuta_imagen(
+            producto.setRutaImagen(
                     firebaseStorageService.cargaImagen(
                             imagenFile, 
                             "producto", 
-                            producto.getId_producto()));
-            
+                            producto.getIdProducto()));
         }
         productoService.save(producto);
         return "redirect:/producto/listado";
