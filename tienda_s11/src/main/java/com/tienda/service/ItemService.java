@@ -24,5 +24,11 @@ public interface ItemService {
     //aqui eliminamos los items por medio de sus ids
     public void delete (Item item);
     
+    public void save (Item item);
+    
+    public void actualiza(Item item);
+    
+    public void facturar();
+    
     
 }
